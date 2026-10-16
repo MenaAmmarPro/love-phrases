@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Love Phrases — little things to say</title>
+  <meta name="description" content="A pocket of little things to say to Mena — draw one, copy it, send it with one tap.">
+  <meta property="og:title" content="Love Phrases — little things to say">
+  <meta property="og:description" content="A pocket of little things to say to Mena — draw one, copy it, send it with one tap.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#faf7f5">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-page="phrases">
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="https://menaammarpro.github.io/">All projects</a>
+        <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+        <a href="https://menaammarpro.github.io/love-ping/">Ping</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">Pocket full of sweetness</p>
+      <h1>Love phrases</h1>
+      <p class="subtitle">Draw one, copy it, send it — sometimes the smallest line is everything.</p>
+    </section>
+
+    <p id="arrive-note" class="arrive-note" hidden></p>
+
+    <section class="card">
+      <div class="phrase-wrap">
+        <p id="phrase" class="phrase">Pull a phrase, just for you.</p>
+      </div>
+      <div class="actions">
+        <button id="draw" class="btn btn-primary">Draw another</button>
+        <button id="copy" class="btn btn-ghost">Copy this</button>
+        <button id="keep" class="btn btn-ghost">Keep in pocket</button>
+        <button id="share" class="btn btn-ghost">Send this link</button>
+      </div>
+      <p id="note" class="note">&nbsp;</p>
+    </section>
+
+    <section class="panel stats">
+      <div class="stat-card">
+        <span class="stat-num" id="drawn">0</span>
+        <span class="stat-label">drawn</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="last">never</span>
+        <span class="stat-label">last one</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" id="favs">0</span>
+        <span class="stat-label">kept in pocket</span>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Pocket</h2>
+      <ul id="pocket" class="pocket"></ul>
+      <button id="clear" class="btn btn-ghost small">Clear pocket</button>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
+  <script src="js/theme-main.js" defer></script>
+  <script src="js/effects.js" defer></script>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
