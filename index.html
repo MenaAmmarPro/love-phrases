@@ -8,7 +8,7 @@
   <meta property="og:title" content="Love Phrases — little things to say">
   <meta property="og:description" content="A pocket of little things to say to Mena — draw one, copy it, send it with one tap.">
   <meta property="og:type" content="website">
-  <meta name="theme-color" content="#faf7f5">
+  <meta name="theme-color" content="#090b20">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="manifest.webmanifest">
@@ -16,21 +16,23 @@
   <link rel="stylesheet" href="css/app.css">
 </head>
 <body data-page="phrases">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+
   <header class="site-header">
-    <div class="container">
-      <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
-      <nav class="site-nav" aria-label="Main">
-        <a href="https://menaammarpro.github.io/">All projects</a>
-        <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
-        <a href="https://menaammarpro.github.io/love-ping/">Ping</a>
-      </nav>
-    </div>
+    <a class="brand" href="https://menaammarpro.github.io/">&#9829; Mena &amp; Ammar</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">Menu</button>
+    <nav class="nav-links" aria-label="Main">
+      <a href="https://menaammarpro.github.io/">All projects</a>
+      <a href="https://menaammarpro.github.io/love-chat/">Chat</a>
+      <a href="https://menaammarpro.github.io/love-ping/">Ping</a>
+      <button class="theme-toggle" type="button" aria-label="Toggle color theme">Theme</button>
+    </nav>
   </header>
 
-  <main class="container">
+  <main>
     <section class="hero">
       <p class="eyebrow">Pocket full of sweetness</p>
-      <h1>Love phrases</h1>
+      <h1>Love <span>phrases</span></h1>
       <p class="subtitle">Draw one, copy it, send it — sometimes the smallest line is everything.</p>
     </section>
 
@@ -41,15 +43,15 @@
         <p id="phrase" class="phrase">Pull a phrase, just for you.</p>
       </div>
       <div class="actions">
-        <button id="draw" class="btn btn-primary">Draw another</button>
-        <button id="copy" class="btn btn-ghost">Copy this</button>
-        <button id="keep" class="btn btn-ghost">Keep in pocket</button>
-        <button id="share" class="btn btn-ghost">Send this link</button>
+        <button id="draw" class="button button-primary" type="button">Draw another</button>
+        <button id="copy" class="button button-ghost" type="button">Copy this</button>
+        <button id="keep" class="button button-ghost" type="button">Keep in pocket</button>
+        <button id="share" class="button button-ghost" type="button">Send this link</button>
       </div>
       <p id="note" class="note">&nbsp;</p>
     </section>
 
-    <section class="panel stats">
+    <section class="stats">
       <div class="stat-card">
         <span class="stat-num" id="drawn">0</span>
         <span class="stat-label">drawn</span>
@@ -64,18 +66,16 @@
       </div>
     </section>
 
-    <section class="panel">
+    <section class="panel pocket-panel">
       <h2>Pocket</h2>
       <ul id="pocket" class="pocket"></ul>
-      <button id="clear" class="btn btn-ghost small">Clear pocket</button>
+      <button id="clear" class="button button-ghost button-small" type="button">Clear pocket</button>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
-      <p class="footer-note">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
-    </div>
+    <p>Made with love, just for you <span aria-hidden="true">&#9829;</span></p>
+    <p class="footer-small">Ammar &rarr; Mena &middot; Karachi &rarr; Bucharest</p>
   </footer>
 
   <button id="back-to-top" class="back-to-top" aria-label="Back to top" hidden>&#8679;</button>
